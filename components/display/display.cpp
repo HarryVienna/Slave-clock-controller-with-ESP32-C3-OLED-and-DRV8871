@@ -57,6 +57,12 @@ Display::Display() {
     _currentTime = "00:00:00";
 }
 
+Display::~Display() {
+    if (_screensaverTimer) {
+        xTimerDelete(_screensaverTimer, 0);
+    }
+}
+
 bool Display::init(gpio_num_t sda_pin, gpio_num_t scl_pin, gpio_num_t rst_pin) {
     // I2C-Bus zurücksetzen falls er in einem ungültigen Zustand ist
     i2c_bus_reset(sda_pin, scl_pin);
@@ -149,4 +155,53 @@ void Display::setPowerSave(bool enable) {
 
 void Display::togglePower() {
     setPowerSave(!_powerSave);
+
+    // Timer zurücksetzen wenn Display eingeschaltet wird
+    if (isOn()) {
+        _resetScreensaverTimer();
+    }
+}
+
+void Display::setScreensaverTimeout(uint32_t timeout_seconds) {
+    _screensaverTimeout = timeout_seconds;
+
+    if (timeout_seconds == 0) {
+        // Screensaver deaktivieren
+        if (_screensaverTimer) {
+            xTimerStop(_screensaverTimer, 0);
+        }
+        return;
+    }
+
+    // Timer erstellen falls noch nicht vorhanden
+    if (!_screensaverTimer) {
+        _screensaverTimer = xTimerCreate(
+            "screensaver",
+            pdMS_TO_TICKS(timeout_seconds * 1000),
+            pdFALSE,  // Einmalig, nicht periodisch
+            this,     // Timer-ID = this-Pointer für Callback
+            _screensaverTimerCallback
+        );
+    } else {
+        // Timer-Periode aktualisieren
+        xTimerChangePeriod(_screensaverTimer, pdMS_TO_TICKS(timeout_seconds * 1000), 0);
+    }
+
+    // Timer starten wenn Display an ist
+    if (isOn()) {
+        _resetScreensaverTimer();
+    }
+}
+
+void Display::_resetScreensaverTimer() {
+    if (_screensaverTimer && _screensaverTimeout > 0) {
+        xTimerReset(_screensaverTimer, 0);
+    }
+}
+
+void Display::_screensaverTimerCallback(TimerHandle_t xTimer) {
+    // this-Pointer aus Timer-ID holen
+    Display* self = static_cast<Display*>(pvTimerGetTimerID(xTimer));
+    ESP_LOGI(TAG, "Screensaver: Display wird ausgeschaltet");
+    self->setPowerSave(true);
 }

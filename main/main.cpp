@@ -25,7 +25,7 @@ extern "C" void app_main(void) {
 
     Display oled;
     oled.init(PIN_SDA, PIN_SCL);
-    oled.setPowerSave(true); // Display beim Start ausschalten
+    oled.setScreensaverTimeout(5 * 60);  // Display nach 5 Minuten ausschalten
 
     // Button initialisieren (active_low, da gegen GND geschaltet)
     Button button(BUTTON_PIN);
