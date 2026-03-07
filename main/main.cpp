@@ -47,11 +47,11 @@ extern "C" void app_main(void) {
         provisioner.get_credentials();
     } else {
         oled.disp_status("Provisioning...");
-        provisioner.start_provisioning("Slave Clock Setup", false);
+        provisioner.start_provisioning("ESP32-WiFi-Provisioning", false);
     }
 
     oled.disp_status("Connecting...");
-    provisioner.connect_sta("Slave Clock");
+    provisioner.connect_sta();
 
     oled.disp_status("Synching time");
     while(!provisioner.is_time_synchronized()) {
