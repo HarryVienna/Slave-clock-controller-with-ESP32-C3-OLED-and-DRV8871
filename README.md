@@ -30,9 +30,7 @@ The system is built using four main modules:
 
 > **Note for Bodet Clocks:** The PCB includes slots for specific diodes to drop the voltage for the 3V date motor found in Bodet flip clocks.
 
-## 🔌 Circuit & PCB
-
-The device is designed to be modular. You can manufacture the PCB using the files in the `hardware/` folder or wire it up on a perfboard.
+## 🔌 PCB
 
 ![PCB Image](https://www.haraldkreuzer.net/files/1617/6996/7048/DSCF7398_klein.jpg)
 
