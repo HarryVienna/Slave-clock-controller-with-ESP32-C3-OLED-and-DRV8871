@@ -1,0 +1,151 @@
+(footprint "TP4056_Module_Protect"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(descr "24-lead though-hole mounted DIP package, row spacing 16.51mm (650 mils), SMDSocket, LongPads")
+	(tags "THT DIP DIL PDIP 2.54mm 16.51mm 650mil SMDSocket LongPads")
+	(property "Reference" "REF**"
+		(at -0.5 -15.5 0)
+		(layer "F.SilkS")
+		(uuid "c85e469b-a291-4239-a8cc-967e89a32d28")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "TP4056_Module_Protect"
+		(at 0 15 0)
+		(layer "F.Fab")
+		(uuid "da8862f9-9d74-4a7b-9225-4572a28da65c")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "9b4d842b-950b-4daf-b85b-8249c2d5b356")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "a92d04ac-a34c-472d-a9ce-a27d2e2c2ad1")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr through_hole)
+	(fp_rect
+		(start -8.7 -14.15)
+		(end 8.7 14.15)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.SilkS")
+		(uuid "0ee8189d-69ab-44a7-a8a7-482de88f288b")
+	)
+	(fp_rect
+		(start -8.7 -14.15)
+		(end 8.7 14.15)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+		(uuid "f6c8fc7a-1780-4714-8765-0c6da570d7eb")
+	)
+	(pad "1" thru_hole roundrect
+		(at -7.2 12.45)
+		(size 2 1.6)
+		(drill 1
+			(offset 0.08 0)
+		)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(roundrect_rratio 0.15625)
+		(uuid "0e10c0f1-afea-48f0-9f82-ef2436f18e88")
+	)
+	(pad "2" thru_hole roundrect
+		(at 7.2 12.45)
+		(size 2 1.6)
+		(drill 1
+			(offset -0.08 0)
+		)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(roundrect_rratio 0.15625)
+		(uuid "2c785a24-fea0-45d5-888e-5e634e739014")
+	)
+	(pad "3" thru_hole roundrect
+		(at -7.2 -10.65)
+		(size 2.08 1.6)
+		(drill 1
+			(offset 0.04 0)
+		)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(roundrect_rratio 0.15625)
+		(uuid "d26bc343-ffce-4dc5-bfd0-592ce83408c1")
+	)
+	(pad "4" thru_hole roundrect
+		(at 7.2 -10.65)
+		(size 2 1.6)
+		(drill 1
+			(offset -0.08 0)
+		)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(roundrect_rratio 0.15625)
+		(uuid "386e62ee-a23a-4781-9558-8b28730a67fa")
+	)
+	(pad "5" thru_hole roundrect
+		(at -4.2 -10.65)
+		(size 2 1.6)
+		(drill 1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(roundrect_rratio 0.15625)
+		(uuid "448fb0fa-8d47-42c8-a2d9-b9935f9b3b09")
+	)
+	(pad "6" thru_hole roundrect
+		(at 4.2 -10.65)
+		(size 2 1.6)
+		(drill 1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(roundrect_rratio 0.15625)
+		(uuid "af684a3a-027a-4089-aadc-677ff9b6dcbe")
+	)
+	(embedded_fonts no)
+	(model "${KICAD9_3DMODEL_DIR}/Package_DIP.3dshapes/DIP-24_W16.51mm_SMDSocket.step"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)

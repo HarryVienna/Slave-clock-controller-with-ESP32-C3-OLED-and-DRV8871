@@ -1,0 +1,8 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "DRV8871")(type "KiCad")(uri "${KIPRJMOD}/DRV8871/DRV8871.kicad_sym")(options "")(descr ""))
+  (lib (name "ESP32-C3_OLED")(type "KiCad")(uri "${KIPRJMOD}/ESP32-C3_OLED/ESP32-C3_OLED.kicad_sym")(options "")(descr ""))
+  (lib (name "SX1308_Module")(type "KiCad")(uri "${KIPRJMOD}/SX1308/SX1308_Module.kicad_sym")(options "")(descr ""))
+  (lib (name "MP1584EN_Module")(type "KiCad")(uri "${KIPRJMOD}/MP1584EN/MP1584EN_Module.kicad_sym")(options "")(descr ""))
+  (lib (name "TP4056_Module")(type "KiCad")(uri "${KIPRJMOD}/TP4056/TP4056_Module.kicad_sym")(options "")(descr ""))
+)
