@@ -29,7 +29,7 @@ extern const char style_css_start[] asm("_binary_style_css_start");
 extern const char style_css_end[]   asm("_binary_style_css_end");
 
 #define WIFI_MAX_RETRIES_INITIAL 5       // Kurze Wartezeit für die erste Verbindung
-#define WIFI_MAX_RETRIES_RECONNECT 3600 // Lange Wartezeit für Wiederverbindung (3600 Versuche * 1s = 1 Stunde)
+    #define WIFI_MAX_RETRIES_RECONNECT 3600 // Lange Wartezeit für Wiederverbindung (3600 Versuche * 1s = 1 Stunde)
 
 static int s_retry_num = 0;
 static int s_max_retries = WIFI_MAX_RETRIES_INITIAL; // Startet immer mit dem kurzen Limit

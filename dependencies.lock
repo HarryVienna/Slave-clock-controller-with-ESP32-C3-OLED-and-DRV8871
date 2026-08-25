@@ -1,28 +1,30 @@
 dependencies:
+  espressif/cjson:
+    component_hash: e788323270d90738662d66fffa910bfe1fba019bba087f01557e70c40485b469
+    dependencies:
+    - name: idf
+      require: private
+      version: '>=5.0'
+    source:
+      registry_url: https://components.espressif.com/
+      type: service
+    version: 1.7.19~2
   idf:
     source:
       type: idf
-    version: 5.5.4
+    version: 6.0.2
   u8g2:
-    component_hash: 5838fbebdf68880f03b63d38be391171ffe57e72e246d4a31d0d06693e5ff85f
+    component_hash: 2938a2975ce2766b52ad86334bb670de95c48137d49980dd42c0124c98cc6348
     dependencies: []
     source:
       git: https://github.com/olikraus/u8g2.git
       path: .
       type: git
     version: 924f3a9344210c3571fc4cac2b15eab055131ccd
-  u8g2_hal_esp32:
-    component_hash: 66004895b7fdde41d83039db9efeeeaed11bdea9a456a2a68980818a8a097e81
-    dependencies: []
-    source:
-      git: https://github.com/mkfrey/u8g2-hal-esp-idf.git
-      path: .
-      type: git
-    version: 4ddd714deabdb45885174724306637f2274d4f6b
 direct_dependencies:
+- espressif/cjson
 - idf
 - u8g2
-- u8g2_hal_esp32
-manifest_hash: a109ddf88badcfdd1cd53ec53285f0d0547853ef7cf0d53ba88de73dc336fecd
+manifest_hash: 5f91a11eeace3f93edd44a9ed35f39eb6430f772ca47fc1210d7891c1a40800a
 target: esp32c3
-version: 2.0.0
+version: 3.0.0
